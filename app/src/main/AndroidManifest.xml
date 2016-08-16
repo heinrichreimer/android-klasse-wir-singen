@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="de.klassewirsingen.app"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.App"
+        android:supportsRtl="true"
+        android:allowBackup="true"
+        android:fullBackupContent="true">
+
+        <activity
+            android:name=".app.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.App">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="https"/>
+                <data android:pathPattern="/.*"/>
+                <data android:host="www.klasse-wir-singen.de"/>
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="https"/>
+                <data android:pathPattern="/.*"/>
+                <data android:host="klasse-wir-singen.de"/>
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="http"/>
+                <data android:pathPattern="/.*"/>
+                <data android:host="www.klasse-wir-singen.de"/>
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="http"/>
+                <data android:pathPattern="/.*"/>
+                <data android:host="klasse-wir-singen.de"/>
+            </intent-filter>
+
+        </activity>
+
+    </application>
+
+</manifest>

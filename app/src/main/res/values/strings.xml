@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Klasse! Wir singen</string>
+
+    <string name="title_dialog_alert">Warnung</string>
+    <string name="positive_dialog_alert">Ok</string>
+    <string name="negative_dialog_alert">Abbrechen</string>
+    <string name="title_dialog_confirm">Bestätigen</string>
+    <string name="positive_dialog_confirm">Ja</string>
+    <string name="negative_dialog_confirm">Nein</string>
+    <string name="title_dialog_prompt">Eingabe</string>
+    <string name="positive_dialog_prompt">Ok</string>
+    <string name="negative_dialog_prompt">Abbrechen</string>
+    <string name="title_dialog_before_unload">Möchten Sie die Seite verlassen?</string>
+    <string name="positive_dialog_before_unload">Ja</string>
+    <string name="negative_dialog_before_unload">Auf der Seite bleiben</string>
+    <string name="positive_dialog_file_chooser">Auswählen</string>
+    <string name="negative_dialog_file_chooser">Abbrechen</string>
+</resources>

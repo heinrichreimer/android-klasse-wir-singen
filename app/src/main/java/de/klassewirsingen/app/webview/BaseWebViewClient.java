@@ -2,26 +2,20 @@ package de.klassewirsingen.app.webview;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
-import android.content.ContentResolver;
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.support.customtabs.CustomTabsIntent;
 import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
-import android.webkit.*;
-
-import com.google.repacked.treelayout.internal.util.Contract;
-import com.google.repacked.treelayout.internal.util.java.util.ListUtil;
+import android.webkit.MimeTypeMap;
+import android.webkit.WebResourceRequest;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import com.orhanobut.logger.Logger;
-
 import de.klassewirsingen.app.R;
 import de.klassewirsingen.app.app.MainActivity;
 
-import java.io.File;
-import java.lang.reflect.Array;
-import java.util.Collections;
 import java.util.List;
 
 public class BaseWebViewClient extends WebViewClient{
@@ -59,6 +53,17 @@ public class BaseWebViewClient extends WebViewClient{
                     TextUtils.equals(mime, "video/mpeg") || TextUtils.equals(mime, "video/x-mpeg") ||
                     TextUtils.equals(mime, "audio/mpeg") || TextUtils.equals(mime, "audio/mp3") ||
                     url.toString().toLowerCase().endsWith(".mp3")) {
+                //The app can't play MP3s
+                launchExternal(activity, url);
+                return true;
+            }
+            if (TextUtils.equals(mime, "image/gif") || TextUtils.equals(mime, "image/jpeg") ||
+                    TextUtils.equals(mime, "image/png") ||
+                    url.toString().toLowerCase().endsWith(".jpeg") ||
+                    url.toString().toLowerCase().endsWith(".jpg") ||
+                    url.toString().toLowerCase().endsWith(".jpe") ||
+                    url.toString().toLowerCase().endsWith(".png") ||
+                    url.toString().toLowerCase().endsWith(".gif")) {
                 //The app can't play MP3s
                 launchExternal(activity, url);
                 return true;

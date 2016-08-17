@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* MaterialDesignIcons.com */
 .mdi, body .button .left:after, body.search-results #main .primary_content_wrap #content article .post-content .post-meta-bot a:after, body .container_24 .grid_1.first-content-widget .textwidget a:after, body .container_24 .grid_1.second-content-widget .textwidget a:after, body .container_24 .grid_1.third-content-widget .textwidget a:after, body .container_24 .grid_2.first-content-widget .textwidget a:after, body .container_24 .grid_2.second-content-widget .textwidget a:after, body .container_24 .grid_2.third-content-widget .textwidget a:after, body .container_24 .grid_3.first-content-widget .textwidget a:after, body .container_24 .grid_3.second-content-widget .textwidget a:after, body .container_24 .grid_3.third-content-widget .textwidget a:after, body .container_24 .grid_4.first-content-widget .textwidget a:after, body .container_24 .grid_4.second-content-widget .textwidget a:after, body .container_24 .grid_4.third-content-widget .textwidget a:after, body .container_24 .grid_5.first-content-widget .textwidget a:after, body .container_24 .grid_5.second-content-widget .textwidget a:after, body .container_24 .grid_5.third-content-widget .textwidget a:after, body .container_24 .grid_6.first-content-widget .textwidget a:after, body .container_24 .grid_6.second-content-widget .textwidget a:after, body .container_24 .grid_6.third-content-widget .textwidget a:after, body .container_24 .grid_7.first-content-widget .textwidget a:after, body .container_24 .grid_7.second-content-widget .textwidget a:after, body .container_24 .grid_7.third-content-widget .textwidget a:after, body .container_24 .grid_8.first-content-widget .textwidget a:after, body .container_24 .grid_8.second-content-widget .textwidget a:after, body .container_24 .grid_8.third-content-widget .textwidget a:after, body .container_24 .grid_9.first-content-widget .textwidget a:after, body .container_24 .grid_9.second-content-widget .textwidget a:after, body .container_24 .grid_9.third-content-widget .textwidget a:after, body .container_24 .grid_10.first-content-widget .textwidget a:after, body .container_24 .grid_10.second-content-widget .textwidget a:after, body .container_24 .grid_10.third-content-widget .textwidget a:after, body .container_24 .grid_11.first-content-widget .textwidget a:after, body .container_24 .grid_11.second-content-widget .textwidget a:after, body .container_24 .grid_11.third-content-widget .textwidget a:after,
 body .container_24 .grid_12.first-content-widget .textwidget a:after,
@@ -5,7 +6,7 @@ body .container_24 .grid_12.second-content-widget .textwidget a:after,
 body .container_24 .grid_12.third-content-widget .textwidget a:after, body .container_24 .grid_13.first-content-widget .textwidget a:after, body .container_24 .grid_13.second-content-widget .textwidget a:after, body .container_24 .grid_13.third-content-widget .textwidget a:after, body .container_24 .grid_14.first-content-widget .textwidget a:after, body .container_24 .grid_14.second-content-widget .textwidget a:after, body .container_24 .grid_14.third-content-widget .textwidget a:after, body .container_24 .grid_15.first-content-widget .textwidget a:after, body .container_24 .grid_15.second-content-widget .textwidget a:after, body .container_24 .grid_15.third-content-widget .textwidget a:after, body .container_24 .grid_16.first-content-widget .textwidget a:after, body .container_24 .grid_16.second-content-widget .textwidget a:after, body .container_24 .grid_16.third-content-widget .textwidget a:after, body .container_24 .grid_17.first-content-widget .textwidget a:after, body .container_24 .grid_17.second-content-widget .textwidget a:after, body .container_24 .grid_17.third-content-widget .textwidget a:after, body .container_24 .grid_18.first-content-widget .textwidget a:after, body .container_24 .grid_18.second-content-widget .textwidget a:after, body .container_24 .grid_18.third-content-widget .textwidget a:after, body .container_24 .grid_19.first-content-widget .textwidget a:after, body .container_24 .grid_19.second-content-widget .textwidget a:after, body .container_24 .grid_19.third-content-widget .textwidget a:after, body .container_24 .grid_20.first-content-widget .textwidget a:after, body .container_24 .grid_20.second-content-widget .textwidget a:after, body .container_24 .grid_20.third-content-widget .textwidget a:after, body .container_24 .grid_21.first-content-widget .textwidget a:after, body .container_24 .grid_21.second-content-widget .textwidget a:after, body .container_24 .grid_21.third-content-widget .textwidget a:after,
 body .container_24 .grid_22.first-content-widget .textwidget a:after,
 body .container_24 .grid_22.second-content-widget .textwidget a:after,
-body .container_24 .grid_22.third-content-widget .textwidget a:after, body .container_24 .grid_23.first-content-widget .textwidget a:after, body .container_24 .grid_23.second-content-widget .textwidget a:after, body .container_24 .grid_23.third-content-widget .textwidget a:after, body .container_24 .grid_24.first-content-widget .textwidget a:after, body .container_24 .grid_24.second-content-widget .textwidget a:after, body .container_24 .grid_24.third-content-widget .textwidget a:after, body #main #header .logo #buttonOpenDrawer, body #main #header nav.primary #buttonCloseDrawer, body #main #header #widget-header input.submit, body #main .primary_content_wrap #content .searchform input.submit {
+body .container_24 .grid_22.third-content-widget .textwidget a:after, body .container_24 .grid_23.first-content-widget .textwidget a:after, body .container_24 .grid_23.second-content-widget .textwidget a:after, body .container_24 .grid_23.third-content-widget .textwidget a:after, body .container_24 .grid_24.first-content-widget .textwidget a:after, body .container_24 .grid_24.second-content-widget .textwidget a:after, body .container_24 .grid_24.third-content-widget .textwidget a:after, body #main #header .logo #buttonOpenDrawer, body #main #header nav.primary #buttonCloseDrawer, body #main #header #widget-header input.submit, body #main .primary_content_wrap #content nav.oldernewer .older a:before, body #main .primary_content_wrap #content nav.oldernewer .newer a:after, body #main .primary_content_wrap #content .searchform input.submit {
   display: inline-block;
   font: normal normal normal 24px/1 "Material Design Icons";
   font-size: inherit;
@@ -5043,6 +5044,10 @@ body {
   font-weight: 400;
   background: #FAFAFA;
   overflow-x: hidden; }
+
+body a, body .link {
+  color: #b32a00;
+}
   body .button {
     text-transform: uppercase;
     font-size: 14px;
@@ -5121,6 +5126,11 @@ body {
     font-weight: 400;
     margin: 0 0 8px;
     text-transform: none; }
+
+body h1 a, body h2 a, body h3 a, body h4 a, body h5 a, body h6 a, body .title a {
+  color: rgba(0, 0, 0, 0.87) !important;
+  text-decoration: none;
+}
   body h1 {
     font-size: 56px !important; }
   body h2 {
@@ -5142,18 +5152,26 @@ body {
   body ul {
     padding: 0;
     overflow: auto;
-    list-style-type: disc; }
+    list-style-type: disc;
+    color: inherit !important;
+  }
     body ul li {
+      line-height: 1.25;
       list-style-type: disc;
+      -webkit-margin-before: 1em;
+      -webkit-margin-after: 1em;
+      -webkit-padding-start: 5px;
       padding: 0 !important;
       margin: 0 !important;
       background: 0 !important;
       border: 0 !important; }
-      body ul li:before {
-        display: inline;
-        content: "\2022\0009";
-        font-weight: 500;
-        padding-right: 1em; }
+
+body ul.list-style-3 li {
+  color: inherit !important;
+  background: 0 !important;
+  text-transform: none;
+  font-weight: 500;
+}
   body.search-results #main .primary_content_wrap #content article {
     width: 100%;
     padding: 0;
@@ -5176,7 +5194,8 @@ body {
         background: rgba(255, 255, 0, 0.87) !important;
         color: inherit !important; }
     body.search-results #main .primary_content_wrap #content article .post-content .post-meta-bot {
-      padding: 0 16px 16px 16px !important; }
+      padding: 0 16px 8px 16px !important;
+    }
       body.search-results #main .primary_content_wrap #content article .post-content .post-meta-bot a {
         text-transform: uppercase;
         font-size: 14px;
@@ -5184,7 +5203,7 @@ body {
         transition: 0.3s ease background;
         color: #FF3D00;
         text-decoration: none;
-        line-height: 36px;
+        line-height: 24px;
         height: 36px;
         box-sizing: border-box;
         padding: 8px;
@@ -5195,6 +5214,39 @@ body {
           background: rgba(0, 0, 0, 0.12); }
         body.search-results #main .primary_content_wrap #content article .post-content .post-meta-bot a:after {
           content: "\2026"; }
+
+body.home #main .primary_content_wrap #content #page-content p:last-of-type {
+  margin: 8px -8px;
+  padding: 0;
+  position: relative;
+}
+
+body.home #main .primary_content_wrap #content #page-content p:last-of-type:before {
+  content: "";
+  display: block;
+  width: 100%;
+  padding-top: 56.25%;
+  /* initial ratio of 16:9*/
+}
+
+body.home #main .primary_content_wrap #content #page-content p:last-of-type iframe {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100% !important;
+  width: 100% !important;
+}
+
+body.home #main .primary_content_wrap #content #page-content div p:last-of-type {
+  margin: 8px 8px 16px;
+  position: static;
+}
+
+body.home #main .primary_content_wrap #content #page-content div p:last-of-type:before {
+  display: none;
+}
   body #FSContact1, body #respond {
     width: 100% !important;
     max-width: none !important;
@@ -5211,7 +5263,7 @@ body {
         margin: 0 0 8px !important;
         padding: 8px !important;
         box-sizing: border-box;
-        font-family: Roboto, Arial,Helvetica,sans-serif;
+        font-family: Roboto, Arial, Helvetica, sans-serif;
         font-size: inherit;
         vertical-align: middle;
         font-weight: 400;
@@ -5541,8 +5593,13 @@ body {
         padding: 0 !important;
         margin: 0 !important;
         width: 100% !important;
+        box-sizing: border-box;
         font-size: inherit !important;
         line-height: inherit !important; }
+
+body #main .primary_content_wrap #content table {
+  margin: 8px 8px 16px;
+}
       body #main .primary_content_wrap #content p {
         margin: 8px 8px 16px;
         font-weight: 400;
@@ -5553,6 +5610,15 @@ body {
           width: auto;
           max-width: 100%;
           height: auto; }
+
+body #main .primary_content_wrap #content img {
+  border-radius: 2px;
+}
+
+body #main .primary_content_wrap #content img[src="/wp-content/uploads/2013/06/phone_icon.png"] {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
       body #main .primary_content_wrap #content .box {
         margin: 0 !important;
         padding: 8px !important;
@@ -5571,6 +5637,16 @@ body {
               -webkit-border-radius: 0 !important;
               -moz-border-radius: 0 !important;
               border-radius: 0 !important; }
+
+body #main .primary_content_wrap #content .box .bg .inner div.container_24 {
+  padding: 0 8px !important;
+}
+
+body #main .primary_content_wrap #content .box .bg .inner div.container_24 img {
+  width: auto;
+  max-width: 100%;
+  margin: 8px 0;
+}
             body #main .primary_content_wrap #content .box .bg .inner p {
               margin: 0; }
             body #main .primary_content_wrap #content .box .bg .inner h1, body #main .primary_content_wrap #content .box .bg .inner h2, body #main .primary_content_wrap #content .box .bg .inner h3, body #main .primary_content_wrap #content .box .bg .inner h4, body #main .primary_content_wrap #content .box .bg .inner h5, body #main .primary_content_wrap #content .box .bg .inner h6 {
@@ -5579,6 +5655,40 @@ body {
             body #main .primary_content_wrap #content .box .bg .inner iframe {
               width: 100%;
               height: 300px; }
+
+body #main .primary_content_wrap #content .box .bg .inner iframe[src="https://www.rossmannversand.de/schulfond/SchulfondAnmeldung.aspx"] {
+  display: none;
+}
+
+body #main .primary_content_wrap #content .box .bg .inner img.size-full {
+  float: none;
+  margin: -16px 0 16px;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
+
+body #main .primary_content_wrap #content .ngg-galleryoverview {
+  padding: 16px !important;
+  box-sizing: border-box !important;
+}
+
+body #main .primary_content_wrap #content .ngg-galleryoverview .ngg-gallery-thumbnail-box img {
+  background: 0;
+  border: 0;
+  margin: 0 0 8px;
+  padding: 0;
+  display: inline-block;
+  width: auto;
+  height: auto;
+}
+
+body #main .primary_content_wrap #content .ngg-galleryoverview .ngg-navigation a.page-numbers, body #main .primary_content_wrap #content .ngg-galleryoverview .ngg-navigation a.next, body #main .primary_content_wrap #content .ngg-galleryoverview .ngg-navigation a.prev,
+body #main .primary_content_wrap #content .ngg-galleryoverview .ngg-navigation span.page-numbers, body #main .primary_content_wrap #content .ngg-galleryoverview .ngg-navigation span.next, body #main .primary_content_wrap #content .ngg-galleryoverview .ngg-navigation span.prev {
+  border: 0;
+  margin-right: 4px;
+  padding: 4px 8px;
+}
       body #main .primary_content_wrap #content #page-content {
         background: 0; }
         body #main .primary_content_wrap #content #page-content .accordion_header {
@@ -5612,11 +5722,134 @@ body {
             color: rgba(0, 0, 0, 0.54); }
         body #main .primary_content_wrap #content #page-content .button:first-of-type {
           width: auto; }
+
+body #main .primary_content_wrap #content .post .single-post .post-content {
+  padding: 0 8px !important;
+  box-sizing: border-box;
+}
+
+body #main .primary_content_wrap #content .post .single-post .post-content div, body #main .primary_content_wrap #content .post .single-post .post-content p {
+  padding: 0 !important;
+  margin: 0 0 16px !important;
+}
+
+body #main .primary_content_wrap #content .post .single-post .post-content div div {
+  text-align: center;
+}
+
+body #main .primary_content_wrap #content .post .single-post .post-content div div img {
+  width: auto;
+  padding-bottom: 8px;
+}
       body #main .primary_content_wrap #content nav.oldernewer {
         width: 100%;
-        overflow: hidden;
         margin: 16px 0;
-        padding: 0 8px; }
+        padding: 0 8px;
+        box-sizing: border-box;
+        overflow: visible;
+      }
+
+body #main .primary_content_wrap #content nav.oldernewer:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+body #main .primary_content_wrap #content nav.oldernewer .older, body #main .primary_content_wrap #content nav.oldernewer .newer {
+  width: auto !important;
+}
+
+body #main .primary_content_wrap #content nav.oldernewer .older a, body #main .primary_content_wrap #content nav.oldernewer .newer a {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #fff;
+  transition: 0.3s ease background;
+  font-weight: 500;
+  background: #FF3D00;
+  text-decoration: none;
+  line-height: 36px;
+  height: 36px;
+  box-sizing: border-box;
+  padding: 0 8px;
+  margin: 6px 6px 0;
+  border-radius: 2px;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  display: inline-block;
+  font-size: 0;
+  margin: 0;
+}
+
+body #main .primary_content_wrap #content nav.oldernewer .older a {
+  float: left;
+}
+
+body #main .primary_content_wrap #content nav.oldernewer .older a:before {
+  font-size: 24px;
+  position: relative;
+  top: 4px;
+  margin-right: 8px;
+  content: "\F04D";
+}
+
+body #main .primary_content_wrap #content nav.oldernewer .older a:after {
+  font-size: 14px;
+  content: "Voriger Beitrag";
+}
+
+body #main .primary_content_wrap #content nav.oldernewer .newer a {
+  float: right;
+}
+
+body #main .primary_content_wrap #content nav.oldernewer .newer a:after {
+  font-size: 24px;
+  position: relative;
+  top: 4px;
+  margin-left: 8px;
+  content: "\F054";
+}
+
+body #main .primary_content_wrap #content nav.oldernewer .newer a:before {
+  font-size: 14px;
+  content: "Nächster Beitrag";
+}
+
+body #main .primary_content_wrap #content #respond #commentform {
+  display: flex;
+  flex-direction: column;
+}
+
+body #main .primary_content_wrap #content #respond #commentform input, body #main .primary_content_wrap #content #respond #commentform textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+body #main .primary_content_wrap #content #respond #commentform p:last-of-type {
+  order: 1;
+}
+
+body #main .primary_content_wrap #content #respond #commentform #submit {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #fff;
+  transition: 0.3s ease background;
+  font-weight: 500;
+  background: #FF3D00;
+  text-decoration: none;
+  line-height: 36px;
+  height: 36px;
+  box-sizing: border-box;
+  padding: 0 8px;
+  margin: 6px 6px 0;
+  border-radius: 2px;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  float: none;
+  margin: 0 0 8px;
+}
+
+body #main .primary_content_wrap #content #respond #commentform #captchaImgDiv {
+  padding: 8px 8px 16px !important;
+  box-sizing: border-box;
+}
       body #main .primary_content_wrap #content .searchform {
         padding: 8px 0 16px 8px;
         box-sizing: border-box; }

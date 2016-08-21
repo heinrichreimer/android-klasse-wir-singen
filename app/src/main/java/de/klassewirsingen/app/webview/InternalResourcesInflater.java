@@ -4,8 +4,6 @@ import android.content.Context;
 import android.content.res.AssetManager;
 import android.net.Uri;
 import android.support.annotation.NonNull;
-
-import com.orhanobut.logger.Logger;
 import org.jetbrains.annotations.NotNull;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -69,10 +67,6 @@ public class InternalResourcesInflater {
         doc.select("body #main #content .searchform input.submit")
                 .attr("value", "\uF349")
                 .attr("placeholder", "Suche");
-
-
-
-        Logger.d("New HTML code:\n%s", doc.outerHtml());
 
         return doc.outerHtml();
     }

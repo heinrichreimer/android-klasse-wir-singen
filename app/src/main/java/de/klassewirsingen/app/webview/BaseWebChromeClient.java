@@ -3,17 +3,11 @@ package de.klassewirsingen.app.webview;
 import android.app.Activity;
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
-import android.webkit.ConsoleMessage;
-import android.webkit.JsPromptResult;
-import android.webkit.JsResult;
-import android.webkit.WebChromeClient;
-import android.webkit.WebView;
+import android.webkit.*;
 import android.widget.EditText;
-
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.orhanobut.logger.Logger;
-
 import de.klassewirsingen.app.R;
 
 public class BaseWebChromeClient extends WebChromeClient {
@@ -140,27 +134,27 @@ public class BaseWebChromeClient extends WebChromeClient {
     public boolean onConsoleMessage(ConsoleMessage message) {
         switch (message.messageLevel()) {
             case DEBUG:
-                Logger.d("WebView console in %s (line %s): %s", message.sourceId(),
+                Logger.t(0).d("WebView console in %s (line %s): %s", message.sourceId(),
                         message.lineNumber(), message.message());
                 break;
             case ERROR:
-                Logger.e("WebView console in %s (line %s): %s", message.sourceId(),
+                Logger.t(0).e("WebView console in %s (line %s): %s", message.sourceId(),
                         message.lineNumber(), message.message());
                 break;
             case LOG:
-                Logger.i("WebView console in %s (line %s): %s", message.sourceId(),
+                Logger.t(0).i("WebView console in %s (line %s): %s", message.sourceId(),
                         message.lineNumber(), message.message());
                 break;
             case TIP:
-                Logger.v("WebView console in %s (line %s): %s", message.sourceId(),
+                Logger.t(0).v("WebView console in %s (line %s): %s", message.sourceId(),
                         message.lineNumber(), message.message());
                 break;
             case WARNING:
-                Logger.w("WebView console in %s (line %s): %s", message.sourceId(),
+                Logger.t(0).w("WebView console in %s (line %s): %s", message.sourceId(),
                         message.lineNumber(), message.message());
                 break;
             default:
-                Logger.d("WebView console in %s (line %s): %s", message.sourceId(),
+                Logger.t(0).d("WebView console in %s (line %s): %s", message.sourceId(),
                         message.lineNumber(), message.message());
                 break;
         }

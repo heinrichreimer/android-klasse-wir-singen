@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
         android:icon="@mipmap/ic_launcher"
@@ -27,34 +28,9 @@
                 <category android:name="android.intent.category.BROWSABLE"/>
                 <category android:name="android.intent.category.DEFAULT" />
                 <data android:scheme="https"/>
-                <data android:pathPattern="/.*"/>
-                <data android:host="www.klasse-wir-singen.de"/>
-            </intent-filter>
-
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
-                <category android:name="android.intent.category.DEFAULT" />
-                <data android:scheme="https"/>
-                <data android:pathPattern="/.*"/>
-                <data android:host="klasse-wir-singen.de"/>
-            </intent-filter>
-
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
-                <category android:name="android.intent.category.DEFAULT" />
                 <data android:scheme="http"/>
-                <data android:pathPattern="/.*"/>
+                <data android:pathPattern="(?i)^/(?!anmeldung-tickets/anmeldung)(?!.*\.(jpe?g|jpe|png|gif|pdf|mp3)$).*$"/>
                 <data android:host="www.klasse-wir-singen.de"/>
-            </intent-filter>
-
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
-                <category android:name="android.intent.category.DEFAULT" />
-                <data android:scheme="http"/>
-                <data android:pathPattern="/.*"/>
                 <data android:host="klasse-wir-singen.de"/>
             </intent-filter>
 

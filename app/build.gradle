@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
-def versionMajor = 0
-def versionMinor = 1
-def versionPatch = 1
+def versionMajor = 1
+def versionMinor = 0
+def versionPatch = 0
 def versionBuild = 0 // bump for dogfood builds, public betas, etc.
 
 android {
     compileSdkVersion 24
-    buildToolsVersion "24.0.0"
+    buildToolsVersion "24.0.1"
 
     defaultConfig {
         applicationId "de.klassewirsingen.app"
@@ -20,7 +20,15 @@ android {
         release {
             minifyEnabled true
             shrinkResources true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFile 'proguard-databinding.pro'
+            proguardFile 'proguard-eventbus-3.pro'
+            proguardFile 'proguard-jsoup.pro'
+            proguardFile 'proguard-square-okio.pro'
+            proguardFile 'proguard-square-okhttp3.pro'
+            proguardFile 'proguard-support-design.pro'
+            proguardFile 'proguard-support-v7-appcompat.pro'
+            proguardFile 'proguard-rules.pro'
+            proguardFile getDefaultProguardFile('proguard-android.txt')
         }
     }
     dataBinding {
@@ -36,10 +44,10 @@ dependencies {
     testCompile 'junit:junit:4.12'
 
     //Support
-    compile 'com.android.support:support-v4:24.1.1'
-    compile 'com.android.support:appcompat-v7:24.1.1'
-    compile 'com.android.support:design:24.1.1'
-    compile 'com.android.support:customtabs:24.1.1'
+    compile 'com.android.support:support-v4:24.2.0'
+    compile 'com.android.support:appcompat-v7:24.2.0'
+    compile 'com.android.support:design:24.2.0'
+    compile 'com.android.support:customtabs:24.2.0'
 
     //UI
     compile 'com.afollestad.material-dialogs:core:0.8.6.2'

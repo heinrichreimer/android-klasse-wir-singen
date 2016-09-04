@@ -21,4 +21,7 @@
     <string name="label_error_no_context">Zeitüberschreitung bei der Verbindung</string>
     <string name="label_error_no_connection">Keine Internetverbindung</string>
     <string name="label_error_timeout">Zeitüberschreitung bei der Verbindung</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

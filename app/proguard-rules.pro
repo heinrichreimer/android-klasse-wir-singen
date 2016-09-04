@@ -15,3 +15,11 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+# Obfuscation parameters:
+#-dontobfuscate
+-useuniqueclassmembernames
+-keepattributes SourceFile,LineNumberTable
+-allowaccessmodification
+
+#-dontwarn

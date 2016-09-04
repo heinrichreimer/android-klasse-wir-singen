@@ -2,9 +2,11 @@ package de.klassewirsingen.app.events;
 
 import android.net.Uri;
 import android.support.annotation.IntDef;
+import android.support.v4.app.Fragment;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
+import java.lang.ref.WeakReference;
 
 
 public class UrlLoadFailEvent {
@@ -21,14 +23,17 @@ public class UrlLoadFailEvent {
     @Reason
     private int reason = Reason.UNKNOWN;
     private Uri url;
+    private WeakReference<Fragment> fragment;
 
-    public UrlLoadFailEvent(Uri url) {
+    public UrlLoadFailEvent(Fragment fragment, Uri url) {
         this.url = url;
+        this.fragment = new WeakReference<>(fragment);
     }
 
-    public UrlLoadFailEvent(@Reason int reason, Uri url) {
+    public UrlLoadFailEvent(Fragment fragment, @Reason int reason, Uri url) {
         this.reason = reason;
         this.url = url;
+        this.fragment = new WeakReference<>(fragment);
     }
 
     @Reason
@@ -38,5 +43,12 @@ public class UrlLoadFailEvent {
 
     public Uri getUrl() {
         return url;
+    }
+
+    public Fragment getFragment() {
+        if (fragment.isEnqueued()) {
+            return null;
+        }
+        return fragment.get();
     }
 }

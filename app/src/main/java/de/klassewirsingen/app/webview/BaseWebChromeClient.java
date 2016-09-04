@@ -1,6 +1,7 @@
 package de.klassewirsingen.app.webview;
 
 import android.app.Activity;
+import android.os.Build;
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
 import android.webkit.*;
@@ -161,4 +162,12 @@ public class BaseWebChromeClient extends WebChromeClient {
         return true;
     }
 
+    @Override
+    public void onProgressChanged(WebView view, int newProgress) {
+        if (newProgress == 100) {
+            if (Build.VERSION.SDK_INT >= 11) {
+                view.setLayerType(WebView.LAYER_TYPE_HARDWARE, null);
+            }
+        }
+    }
 }

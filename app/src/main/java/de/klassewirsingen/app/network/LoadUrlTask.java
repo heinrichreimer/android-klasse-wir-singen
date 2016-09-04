@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import de.klassewirsingen.app.events.UrlLoadFailEvent;
 import de.klassewirsingen.app.events.UrlLoadSuccessEvent;
 import de.klassewirsingen.app.webview.InternalResourcesInflater;
@@ -25,7 +26,7 @@ import java.net.SocketTimeoutException;
 public class LoadUrlTask extends AsyncTask<Void, Void, String> {
     private OkHttpClient client;
 
-    private WeakReference<Context> context;
+    private WeakReference<Fragment> fragment;
 
     @NotNull
     @NonNull
@@ -35,30 +36,30 @@ public class LoadUrlTask extends AsyncTask<Void, Void, String> {
     @UrlLoadFailEvent.Reason
     private int reason = UrlLoadFailEvent.Reason.UNKNOWN;
 
-    public LoadUrlTask(Context context, @NotNull @NonNull Uri url, @Nullable Uri historyUrl) {
-        this.context = new WeakReference<>(context);
+    public LoadUrlTask(Fragment fragment, @NotNull @NonNull Uri url, @Nullable Uri historyUrl) {
+        this.fragment = new WeakReference<>(fragment);
         this.url = url;
         this.historyUrl = historyUrl;
 
-        File httpCacheDirectory = new File(context.getCacheDir(), "responses");
+        File httpCacheDirectory = new File(fragment.getContext().getCacheDir(), "responses");
         int cacheSize = 10 * 1024 * 1024; //10mb
         Cache cache = new Cache(httpCacheDirectory, cacheSize);
 
         client = new OkHttpClient.Builder()
                 .cache(cache)
-                .addNetworkInterceptor(new RewriteCacheControlInterceptor(context))
+                .addNetworkInterceptor(new RewriteCacheControlInterceptor(fragment.getContext()))
                 .build();
     }
 
     @Nullable
     @Override
     protected String doInBackground(Void... args) {
-        if (context.isEnqueued()) {
+        if (fragment.isEnqueued()) {
             reason = UrlLoadFailEvent.Reason.NO_CONTEXT;
             cancel(true);
             return null;
         }
-        ConnectivityManager connectivityManager = (ConnectivityManager) context.get()
+        ConnectivityManager connectivityManager = (ConnectivityManager) fragment.get().getContext()
                 .getSystemService(Context.CONNECTIVITY_SERVICE);
 
         NetworkInfo activeNetwork = connectivityManager.getActiveNetworkInfo();
@@ -80,13 +81,13 @@ public class LoadUrlTask extends AsyncTask<Void, Void, String> {
 
             String html = response.body().string();
 
-            if (context.isEnqueued()) {
+            if (fragment.isEnqueued()) {
                 reason = UrlLoadFailEvent.Reason.NO_CONTEXT;
                 cancel(true);
                 return null;
             }
 
-            html = InternalResourcesInflater.inflate(context.get(), html, url);
+            html = InternalResourcesInflater.inflate(fragment.get().getContext(), html, url);
 
             return html;
         } catch (IOException e) {
@@ -104,11 +105,11 @@ public class LoadUrlTask extends AsyncTask<Void, Void, String> {
         if (html == null) {
             onCancelled();
         }
-        EventBus.getDefault().post(new UrlLoadSuccessEvent(html, url, historyUrl));
+        EventBus.getDefault().post(new UrlLoadSuccessEvent(fragment.get(), html, url, historyUrl));
     }
 
     @Override
     protected void onCancelled() {
-        EventBus.getDefault().post(new UrlLoadFailEvent(reason, url));
+        EventBus.getDefault().post(new UrlLoadFailEvent(fragment.get(), reason, url));
     }
 }

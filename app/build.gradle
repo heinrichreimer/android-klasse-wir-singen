@@ -2,18 +2,18 @@ apply plugin: "com.android.application"
 apply plugin: "jacoco-android"
 
 def versionMajor = 1
-def versionMinor = 0
+def versionMinor = 1
 def versionPatch = 0
-def versionBuild = 0 // bump for dogfood builds, public betas, etc.
+def versionBuild = 1 // bump for dogfood builds, public betas, etc.
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "24.0.1"
+    compileSdkVersion 25
+    buildToolsVersion '25.0.2'
 
     defaultConfig {
         applicationId "de.klassewirsingen.app"
         minSdkVersion 15
-        targetSdkVersion 24
+        targetSdkVersion 25
         versionCode versionMajor * 10000 + versionMinor * 1000 + versionPatch * 100 + versionBuild
         versionName "${versionMajor}.${versionMinor}" + (versionPatch == 0 ? "" : ".${versionPatch}")
     }
@@ -48,10 +48,10 @@ dependencies {
     testCompile 'junit:junit:4.12'
 
     //Support
-    compile 'com.android.support:support-v4:24.2.0'
-    compile 'com.android.support:appcompat-v7:24.2.0'
-    compile 'com.android.support:design:24.2.0'
-    compile 'com.android.support:customtabs:24.2.0'
+    compile 'com.android.support:support-v4:25.3.0'
+    compile 'com.android.support:appcompat-v7:25.3.0'
+    compile 'com.android.support:design:25.3.0'
+    compile 'com.android.support:customtabs:25.3.0'
 
     //UI
     compile 'com.afollestad.material-dialogs:core:0.8.6.2'

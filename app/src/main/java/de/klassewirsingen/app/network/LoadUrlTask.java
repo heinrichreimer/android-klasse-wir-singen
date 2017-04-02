@@ -16,7 +16,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 import org.greenrobot.eventbus.EventBus;
-import org.jetbrains.annotations.NotNull;
 
 import java.io.File;
 import java.io.IOException;
@@ -28,7 +27,6 @@ public class LoadUrlTask extends AsyncTask<Void, Void, String> {
 
     private WeakReference<Fragment> fragment;
 
-    @NotNull
     @NonNull
     private Uri url;
     @Nullable
@@ -36,7 +34,7 @@ public class LoadUrlTask extends AsyncTask<Void, Void, String> {
     @UrlLoadFailEvent.Reason
     private int reason = UrlLoadFailEvent.Reason.UNKNOWN;
 
-    public LoadUrlTask(Fragment fragment, @NotNull @NonNull Uri url, @Nullable Uri historyUrl) {
+    public LoadUrlTask(Fragment fragment, @NonNull Uri url, @Nullable Uri historyUrl) {
         this.fragment = new WeakReference<>(fragment);
         this.url = url;
         this.historyUrl = historyUrl;

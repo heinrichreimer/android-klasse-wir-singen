@@ -29,7 +29,6 @@ import de.klassewirsingen.app.webview.ObservableWebView;
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
-import org.jetbrains.annotations.NotNull;
 
 import static de.klassewirsingen.app.app.MainActivity.HOME_URI;
 
@@ -129,15 +128,13 @@ public class WebFragment extends Fragment {
         super.onDestroy();
     }
 
-    private void loadUrl(@NotNull @NonNull Uri url) {
+    private void loadUrl(@NonNull Uri url) {
         Logger.d("Loading url: %s", url);
         currentUrl = url;
 
         binding.swipeRefresh.setRefreshing(true);
 
-        if (Build.VERSION.SDK_INT >= 11) {
-            binding.webView.setLayerType(WebView.LAYER_TYPE_SOFTWARE, null);
-        }
+        binding.webView.setLayerType(WebView.LAYER_TYPE_SOFTWARE, null);
 
         loadUrlTask = new LoadUrlTask(this, url, currentUrl);
         loadUrlTask.execute();

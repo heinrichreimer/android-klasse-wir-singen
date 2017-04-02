@@ -20,8 +20,10 @@ import java.util.regex.Pattern;
 
 public class BaseWebViewClient extends WebViewClient{
 
-    private static final Pattern PATH_REGEX = Pattern.compile("(?i)^/(?!anmeldung-tickets/anmeldung)(?!.*\\.(jpe?g|jpe|png|gif|pdf|mp3)$).*$");
-    private static final Pattern IMAGE_REGEX = Pattern.compile("(?i)^/(?!anmeldung-tickets/anmeldung).*\\.(jpe?g|jpe|png|gif|pdf|mp3)$");
+    private static final Pattern REGISTRATION_SITE_REGEX = Pattern.compile(
+            "anmeldung-tickets/anmeldung", Pattern.CASE_INSENSITIVE);
+    private static final Pattern IMAGE_REGEX = Pattern.compile(
+            "\\.(jpe?g|jpe|png|gif|pdf|mp3)$", Pattern.CASE_INSENSITIVE);
 
     @Deprecated
     @SuppressWarnings("deprecation")
@@ -48,16 +50,16 @@ public class BaseWebViewClient extends WebViewClient{
                 TextUtils.equals(url.getScheme(), "https")) &&
                 (TextUtils.equals(url.getHost(), "klasse-wir-singen.de") ||
                         TextUtils.equals(url.getHost(), "www.klasse-wir-singen.de"))) {
-
             String path = url.getPath();
-            if (PATH_REGEX.matcher(path).matches()) {
-                //Matches a path we can open itself
-                browseInternally(activity, url);
+
+            if (IMAGE_REGEX.matcher(path).find()) {
+                viewExternally(activity, url);
                 return true;
             }
 
-            if (IMAGE_REGEX.matcher(path).matches()) {
-                viewExternally(activity, url);
+            if (!REGISTRATION_SITE_REGEX.matcher(path).find()) {
+                browseInternally(activity, url);
+                return true;
             }
         }
         browseExternally(activity, url);

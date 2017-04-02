@@ -9,7 +9,6 @@ import android.support.v7.app.AppCompatActivity;
 import com.orhanobut.logger.Logger;
 import de.klassewirsingen.app.R;
 import de.klassewirsingen.app.databinding.ActivityMainBinding;
-import org.jetbrains.annotations.NotNull;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void loadUrl(@NotNull @NonNull Uri url) {
+    private void loadUrl(@NonNull Uri url) {
         Logger.d("Loading url: %s", url);
 
         WebFragment fragment = WebFragment.newInstance(url);

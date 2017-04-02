@@ -4,11 +4,12 @@ import android.content.Context;
 import android.content.res.AssetManager;
 import android.net.Uri;
 import android.support.annotation.NonNull;
-import org.jetbrains.annotations.NotNull;
+import android.text.TextUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.parser.Tag;
+import org.jsoup.select.Elements;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -16,7 +17,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 public class InternalResourcesInflater {
-    public static String inflate(Context context, String html, @NotNull @NonNull Uri baseUrl) {
+    public static String inflate(Context context, String html, @NonNull Uri baseUrl) {
         //Remove Cufon library
         html = html.replaceAll("Cufon\\.now\\(\\);", "");
         html = html.replaceAll("wp-content/themes/theme[1-9]{1,4}/js/cufon-replace\\.js,?", "");
@@ -67,6 +68,43 @@ public class InternalResourcesInflater {
         doc.select("body #main #content .searchform input.submit")
                 .attr("value", "\uF349")
                 .attr("placeholder", "Suche");
+
+        //Song download link
+        Element homePageContent = doc.select("body.home #main .primary_content_wrap #content #page-content").first();
+        if (homePageContent != null) {
+            homePageContent.prepend("<a class=\"button\" id=\"buttonDownloads\" title=\"Zu den Liedern der Liederfeste Klasse! Wir singen\" href=\"/projekt/lieder-2017/\">Alle Lieder auf einen Blick!</a>");
+        }
+
+        //Song list
+        Element songList = doc.select("body #post-7518 article #page-content .box .bg .inner").first();
+        if (songList != null) {
+            for (Element songListDiv : songList.select("> div")) {
+                if (TextUtils.isEmpty(songListDiv.text().trim())) {
+                    //Delete empty song entry
+                    songListDiv.remove();
+                } else {
+                    //Unwrap nested <strong>'s and <div>'s
+                    Elements songListNestedElements;
+                    songListNestedElements = songListDiv.select("> strong");
+                    for (Element songListNestedElement : songListNestedElements) {
+                        songListNestedElement.unwrap();
+                    }
+                    songListNestedElements = songListDiv.select("> div");
+                    if (songListNestedElements.size() > 0) {
+
+                        songListDiv.unwrap();
+                    }
+                }
+            }
+            for (Element songListDiv : songList.select("> div")) {
+                Element songListDivLinkContainer = songListDiv.nextElementSibling();
+                if (songListDivLinkContainer != null && "p".equalsIgnoreCase(songListDivLinkContainer.tagName())) {
+                    songListDivLinkContainer.html(songListDivLinkContainer.html()
+                            .replace("–", "")
+                            .replace("<br>", ""));
+                }
+            }
+        }
 
         return doc.outerHtml();
     }
